@@ -1,11 +1,11 @@
 ﻿namespace InterfaceExercise;
 
-public interface IVehicle
+public interface IVehicle // create interface
 {
-    public string NumberOfWheels { get; set; }
-    public string NumberOfSeats { get; set; }
-    public string NumberOfDoors { get; set; }
-    public bool IsAutomatic { get; set; }
-    
+    // add four members that a truck, car, and SUV would have in common
+    public string NumberOfWheels { get; set; } // first member
+    public string NumberOfSeats { get; set; } // second member
+    public string NumberOfDoors { get; set; } // third member
+    public bool IsAutomatic { get; set; } // fourth member
     
 }
