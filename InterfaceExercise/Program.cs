@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterfaceExercise
 {
@@ -37,13 +38,59 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values.
             //Creatively display and organize their values
-            
+
+            var carOne = new Car();
+            carOne.Make = "Subaru";
+            carOne.Model = "Crosstrek";
+            carOne.Year = 2015;
+            carOne.IsConvertible = true;
+            carOne.HasTrunk = true;
+            carOne.NumberOfWheels = "4";
+            carOne.NumberOfSeats = "6";
+            carOne.NumberOfDoors = "2";
+            carOne.IsAutomatic = true;
+            carOne.Logo = "Swoosh";
+            carOne.Location = "Denver";
+
+            var truckOne = new Truck();
+            truckOne.Make = "Jeep";
+            truckOne.Model = "Gladiator";
+            truckOne.Year = 2024;
+            truckOne.HasBedCover = false;
+            truckOne.HasTowHitch = true;
+            truckOne.NumberOfWheels = "6";
+            truckOne.NumberOfSeats = "4";
+            truckOne.NumberOfDoors = "2";
+            truckOne.IsAutomatic = false;
+            truckOne.Logo = "Penguin";
+            truckOne.Location = "New York";
+
+            var suvOne = new SUV();
+            suvOne.Make = "Nissan";
+            suvOne.Model = "Pathfinder";
+            suvOne.Year = 2019;
+            suvOne.HasFoldableCargoSpace = true;
+            suvOne.SeatRows = 3;
+            suvOne.NumberOfWheels = "4";
+            suvOne.NumberOfSeats = "8";
+            suvOne.NumberOfDoors = "4";
+            suvOne.IsAutomatic = true;
+            suvOne.Logo = "Popsicle";
+            suvOne.Location = "Los Angeles";
+
+            var parkingLot = new List<IVehicle>() { carOne, truckOne, suvOne };
+
+            foreach (var ride in parkingLot)
+            {
+                Console.WriteLine($"This is a {ride.Make} {ride.Model}, made in the year {ride.Year}.\n");
+            }
+
             //Option for displaying values: 
             //Create a stubbed out method called DisplayDetails in your IVehicle interface.
             //Implement the stubbed out method in the derived classes.
             //In the scope of them method, use string interpolation to display property values.
             //In order to also interpolate values from ICompany, research how to extend interfaces.
-            
+
         }
     }
 }
